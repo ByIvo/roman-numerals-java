@@ -1,0 +1,8 @@
+tasks:
+  - init: gradle build
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-test@0.22.3:r0wZhaCeRHUpyUd2S8C/Tw==
+    - vscjava.vscode-java-debug@0.25.1:yUSBAu6nHsJCoKr2noLqvw==
+    - redhat.java@0.59.1:I1aCqirGGkAy6gp9yZzIDA==
