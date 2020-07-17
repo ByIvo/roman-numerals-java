@@ -6,6 +6,13 @@ import static org.junit.Assert.assertThat;
 class RomanNumeralTest {
 
     @Test
+    void shouldPrintEmpty_whenConvertingTheNumberZero() {
+        String romanNumeral = RomanNumeralConverter.convert(0);
+
+        assertThat(romanNumeral, equalTo(""));
+    }
+
+    @Test
     void shouldPrintAnI_whenConvertingTheNumberOne() {
         String romanNumeral = RomanNumeralConverter.convert(1);
 
@@ -87,5 +94,40 @@ class RomanNumeralTest {
         String romanNumeral = RomanNumeralConverter.convert(111);
 
         assertThat(romanNumeral, equalTo("CXI"));
+    }
+
+    @Test
+    void shouldPrintCLXXIX_whenConvertingTheNumber179() {
+        String romanNumeral = RomanNumeralConverter.convert(179);
+
+        assertThat(romanNumeral, equalTo("CLXXIX"));
+    }
+
+    @Test
+    void shouldPrintXLIX_whenConvertingTheNumber49() {
+        String romanNumeral = RomanNumeralConverter.convert(49);
+
+        assertThat(romanNumeral, equalTo("XLIX"));
+    }
+
+    @Test
+    void shouldPrintXCVIII_whenConvertingTheNumber98() {
+        String romanNumeral = RomanNumeralConverter.convert(98);
+
+        assertThat(romanNumeral, equalTo("XCVIII"));
+    }
+
+    @Test
+    void shouldPrintD_whenConvertingTheNumber500() {
+        String romanNumeral = RomanNumeralConverter.convert(500);
+
+        assertThat(romanNumeral, equalTo("D"));
+    }
+
+    @Test
+    void shouldPrintCDXCIX_whenConvertingTheNumber499() {
+        String romanNumeral = RomanNumeralConverter.convert(499);
+
+        assertThat(romanNumeral, equalTo("CDXCIX"));
     }
 }
