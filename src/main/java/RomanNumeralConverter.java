@@ -22,7 +22,7 @@ public class RomanNumeralConverter {
     }
 
     public static String convert(int number) {
-        if (number == 0){
+        if (number == 0) {
             return "";
         }
 
@@ -35,11 +35,10 @@ public class RomanNumeralConverter {
     private static int findFirstLowerRomanNumberThan(int number) {
         List<Integer> sortedKeys = getSortedKeysFromRomanRepresentation();
 
-
         int higherKeyNumber = 0;
 
         for (int keyNumber: sortedKeys) {
-            if(keyNumber > number){
+            if (keyNumber > number) {
                 break;
             }
 
